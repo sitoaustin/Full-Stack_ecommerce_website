@@ -3,9 +3,18 @@ import styled from "styled-components";
 export const DetailsStyle = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   img {
     width: 40%;
+  }
+  margin: 5rem 10% 0rem 10%;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    margin: 0rem;
+    img {
+      width: 100%;
+    }
+    margin-top: 3rem;
   }
 `;
 
@@ -16,6 +25,9 @@ export const ProductInfo = styled.div`
     font-weight: medium;
     padding: 0.5rem 1rem;
     cursor: pointer;
+  }
+  @media (max-width: 720px) {
+    width: 100%;
   }
 `;
 

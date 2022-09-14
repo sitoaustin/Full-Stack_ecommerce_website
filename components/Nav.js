@@ -15,7 +15,7 @@ export default function Nav() {
   console.log(user);
   return (
     <NavStyles>
-      <Link href={`/`}>Styled.</Link>
+      <Link href={`/`}><h1>G Q .</h1></Link>
       <NavItems>
         <User />
         <div onClick={() => setShowCart(true)}>

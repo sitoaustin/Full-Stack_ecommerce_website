@@ -9,6 +9,9 @@ export const NavStyles = styled.nav`
   a {
     font-size: 1.2rem;
   }
+  h1 {
+    cursor: pointer;
+  }
 `;
 
 export const NavItems = styled.div`

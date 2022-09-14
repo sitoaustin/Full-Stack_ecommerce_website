@@ -48,7 +48,7 @@ export default function Cart() {
 
   return (
     <CartWrapper
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1 }} 
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       onClick={() => setShowCart(false)}
