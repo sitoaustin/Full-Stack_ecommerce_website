@@ -13,6 +13,7 @@ import { useStateContext } from "../../lib/context";
 // Adding the toast
 import toast from "react-hot-toast";
 import { useEffect } from "react";
+// import Image from "next/image";
 
 export default function ProductDetails() {
   // Fetch slug

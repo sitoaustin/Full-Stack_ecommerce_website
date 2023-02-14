@@ -12,10 +12,11 @@ const { AnimatePresence, motion } = require("framer-motion");
 export default function Nav() {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   const { user, error, isLoading } = useUser();
-  console.log(user);
   return (
     <NavStyles>
-      <Link href={`/`}><h1>G Q .</h1></Link>
+      <Link href={`/`}>
+        <h1>G Q .</h1>
+      </Link>
       <NavItems>
         <User />
         <div onClick={() => setShowCart(true)}>
@@ -25,7 +26,7 @@ export default function Nav() {
             </motion.span>
           )}
           <FiShoppingBag />
-          <h3>Cart</h3>
+          <h2>Cart</h2>
         </div>
       </NavItems>
       <AnimatePresence>{showCart && <Cart />}</AnimatePresence>

@@ -10,7 +10,7 @@ export default function User() {
     return (
       <div onClick={() => route.push("/api/auth/login")}>
         <FaUserCircle></FaUserCircle>
-        <h3>Profile</h3>
+        <h2>Profile</h2>
       </div>
     );
   return (
