@@ -2,6 +2,7 @@ import ToggleContent from "./toggle";
 const { LayoutGroup, motion } = require("framer-motion");
 
 import { FooterStyle, FooterStyleSmallScreen } from "../styles/FooterStyles";
+import Link from "next/link";
 export default function Footer() {
   return (
     <>
@@ -11,18 +12,18 @@ export default function Footer() {
             <h2>About</h2>
             <div className="para-div">
               <p>
-                Founded in 2010 in Amsterdam, ETQ derived under the mindset of
+                Founded in 2022 in Lagos, GQ. derived under the mindset of
                 eliminating over-accessorized branding and focusing primarily on
                 letting the quality of the product speak for itself.
-                <a href="./about.html">Read more</a>
+                <Link href="./about">Read more</Link>
               </p>
             </div>
           </div>
           <div className="address-footer">
             <h2>Address</h2>
-            <p>Singel 465</p>
-            <p>1012 WP Amsterdam</p>
-            <p>The Netherlands</p>
+            <p>454 Broad way</p>
+            <p>246 LG Lagos</p>
+            <p>Nigeria</p>
           </div>
           <div className="contact-footer">
             <h2>Contact</h2>
@@ -68,18 +69,18 @@ export default function Footer() {
           <ToggleContent header="About">
             <motion.div className="para-div content-container">
               <motion.p>
-                Founded in 2010 in Amsterdam, ETQ derived under the mindset of
+                Founded in 2022 in Lagos, GQ. derived under the mindset of
                 eliminating over-accessorized branding and focusing primarily on
                 letting the quality of the product speak for itself.
-                <motion.a href="./about.html">Read more</motion.a>
+                <Link href="./about">Read more</Link>
               </motion.p>
             </motion.div>
           </ToggleContent>
           <ToggleContent header="Address">
             <div className="address-footer content-container">
-              <p>Singel 465</p>
-              <p>1012 WP Amsterdam</p>
-              <p>The Netherlands</p>
+              <p>454 Broad way</p>
+              <p>246 LG Lagos</p>
+              <p>Nigeria</p>
             </div>
           </ToggleContent>
           <ToggleContent header="Info">

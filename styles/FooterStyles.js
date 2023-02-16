@@ -8,9 +8,6 @@ export const FooterStyle = styled.footer`
   border-top: solid black 0.1rem;
   margin: 10rem 0;
 
-  p {
-    font-size: 0.875rem;
-  }
   .para-div {
     max-width: 35rem;
   }
@@ -94,11 +91,7 @@ export const FooterStyleSmallScreen = styled(motion.footer)`
     cursor: pointer;
   }
   .footer-smallscreen {
-    /* display: flex; */
-    /* align-items: center; */
-    /* flex-direction: column; */
     min-height: 3rem;
-    /* justify-content: center; */
   }
   .faq-line {
     background: #bbbaba;
