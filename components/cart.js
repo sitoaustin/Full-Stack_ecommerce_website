@@ -7,9 +7,11 @@ import {
   CardInfo,
   Checkout,
   Cards,
+  BackIcon,
 } from "../styles/CartStyles";
 import { Quantity } from "../styles/ProductDetails";
 import { FaShoppingCart } from "react-icons/fa";
+import { HiOutlineX } from "react-icons/hi";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import getStripe from "../lib/getStripe";
 
@@ -48,7 +50,7 @@ export default function Cart() {
 
   return (
     <CartWrapper
-      animate={{ opacity: 1 }} 
+      animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
       onClick={() => setShowCart(false)}
@@ -69,6 +71,9 @@ export default function Cart() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
           >
+            <BackIcon onClick={() => setShowCart(false)}>
+              <HiOutlineX />
+            </BackIcon>
             <h1>You have more shopping to do</h1>
             <FaShoppingCart />
           </EmptyStyle>

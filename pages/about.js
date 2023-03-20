@@ -1,4 +1,5 @@
 const { LayoutGroup, motion } = require("framer-motion");
+import Image from "next/image";
 
 import { AboutStyles } from "../styles/AboutStyles";
 export default function About() {
@@ -7,7 +8,7 @@ export default function About() {
       <main>
         <div className="about-body">
           <div className="first-about-section">
-            <img src="./img/about1.png" alt="image" />
+            <Image src="../public/about1.png" alt="image" />
             <div className="about-intro">
               <h2>MEET THE FOUNDER</h2>
               <h2>Hi I’m Peach Lee, founder of PEACH COLLECTIONS</h2>

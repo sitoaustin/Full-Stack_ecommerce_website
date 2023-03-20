@@ -11,6 +11,24 @@ export default function ToggleContent({ children, header }) {
       layout
       onClick={() => setIsOpen(!isOpen)}
     >
+      {/* {header === "moon" ? (
+        <>
+          <motion.div className="main-section-footer"></motion.div>
+          {children}
+        </>
+      ) : (
+        <>
+          <motion.div className="main-section-footer">
+            <motion.h2 className="h3-p" layout>
+              {header}
+            </motion.h2>
+            {!isOpen ? <BiPlus /> : <BiMinus />}
+          </motion.div>
+          {isOpen ? children : ""}
+          <motion.div layout className="faq-line"></motion.div>
+        </>
+      )} */}
+
       <motion.div className="main-section-footer">
         <motion.h2 className="h3-p" layout>
           {header}

@@ -86,3 +86,14 @@ export const Checkout = styled(motion.div)`
 `;
 
 export const Cards = styled(motion.div)``;
+export const BackIcon = styled(motion.div)`
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  cursor: pointer;
+  svg {
+    font-size: 2rem;
+    color: var(--secondary);
+  }
+`;

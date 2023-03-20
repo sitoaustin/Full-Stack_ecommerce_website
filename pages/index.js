@@ -3,6 +3,7 @@ import { useQuery } from "urql";
 import { PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/products";
 import { Gallery } from "../styles/Gallery";
+import SkeletonLoading from "../components/skeletonLoading";
 
 export default function Home() {
   // Fetch products from strapi
@@ -10,7 +11,12 @@ export default function Home() {
   const { data, fetching, error } = results;
 
   // check for the data coming in
-  if (fetching) return <p>Loading...</p>;
+  if (fetching)
+    return (
+      <Gallery>
+        <SkeletonLoading />
+      </Gallery>
+    );
   if (error) return <p>Oh no... {error.message}</p>;
   const products = data.products.data;
 

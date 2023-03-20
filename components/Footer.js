@@ -1,5 +1,5 @@
 import ToggleContent from "./toggle";
-const { LayoutGroup, motion } = require("framer-motion");
+const { LayoutGroup, motion, AnimatePresence } = require("framer-motion");
 
 import { FooterStyle, FooterStyleSmallScreen } from "../styles/FooterStyles";
 import Link from "next/link";
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
       </FooterStyle>
       <FooterStyleSmallScreen>
-        <LayoutGroup>
+        <LayoutGroup layoutId="underline">
           <ToggleContent header="About">
             <motion.div className="para-div content-container">
               <motion.p>
@@ -97,30 +97,34 @@ export default function Footer() {
               <p>Pinterest</p>
             </div>
           </ToggleContent>
-          <motion.div className="contact-footer">
-            <p>Email us</p>
-            <p>+234 816 491 8641</p>
-          </motion.div>
-          <div className="down-footer">
-            <div className="newsletter">
-              <div className="newletter-text">
-                <p>Join our Newsletter.</p>
-              </div>
-              <motion.div className="submit-footer">
-                <input type="email" />
-                <h2>
-                  <a href="#">Submit</a>
-                </h2>
-              </motion.div>
-            </div>
-            <div className="empty-footer"></div>
-            <div className="empty-footer1"></div>
-            <div className="terms">
-              <p>Terms & conditions</p>
-              <p>Privacy statement</p>
-            </div>
-          </div>
         </LayoutGroup>
+        <AnimatePresence>
+          <motion.div layout transition={{ duration: 2, type: "tween" }}>
+            <motion.div className="contact-footer" layout>
+              <p>Email us</p>
+              <p>+234 816 491 8641</p>
+            </motion.div>
+            <motion.div className="down-footer">
+              <motion.div className="newsletter">
+                <motion.div className="newletter-text">
+                  <p>Join our Newsletter.</p>
+                </motion.div>
+                <motion.div className="submit-footer">
+                  <input type="email" />
+                  <h2>
+                    <a href="#">Submit</a>
+                  </h2>
+                </motion.div>
+              </motion.div>
+              <motion.div className="empty-footer"></motion.div>
+              <motion.div className="empty-footer1"></motion.div>
+              <motion.div className="terms">
+                <p>Terms & conditions</p>
+                <p>Privacy statement</p>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
       </FooterStyleSmallScreen>
     </>
   );
